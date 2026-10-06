@@ -1,3 +1,8 @@
+#Legaspi, Jazztinn Kyle G.
+#CS 202
+#10/6/2026
+#Act1
+
 import random
 
 #weapon class
