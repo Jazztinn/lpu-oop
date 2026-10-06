@@ -9,7 +9,7 @@ class Player:
         self.weapon = weapon
 
     def attack(self, enemy):
-        enemy.health -= self.weapon.damage
+        enemy.health -= self.weapon.damage * self.agility
         print(f"{self.name} attacks with {self.weapon.name} for {self.weapon.damage} damage!")
 
 class Enemy:
@@ -24,13 +24,12 @@ class Weapon:
 
 decepticon = Enemy("Megatron", 2000)
 blaster = Weapon("Blaster", 300)
-sword = Weapon("Greatsword", 30)
-staff = Weapon("Magic Staff", 25)
-bow = Weapon("Longbow", 15)
 
-player1 = Player("Bumble Bee", 100, 150, 1000, 300, 500, blaster)
+player1 = Player("Bumble Bee", 100, 1.5, 1000, 300, 500, blaster)
 
 print(player1.name, player1.health)
 
 player1.attack(decepticon)
 print(f"{decepticon.name}'s health: {decepticon.health}")
+
+print(input("whatever"))
